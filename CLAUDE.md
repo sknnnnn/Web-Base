@@ -1,123 +1,280 @@
-# Instrucciones para Claude
+# CLAUDE.md
 
-## Objetivo
+## 1. OBJETIVO DEL PROYECTO
 
-Este repositorio es una base reutilizable para desarrollar sitios web
-profesionales.
+Este repositorio funciona como una base reutilizable para desarrollar
+sitios web profesionales.
 
-El código debe mantenerse organizado, reutilizable, responsive y fácil
-de mantener.
+La base debe priorizar:
 
-## Reglas generales
+- código limpio;
+- estructura clara;
+- componentes reutilizables;
+- responsive;
+- accesibilidad;
+- SEO básico;
+- facilidad de mantenimiento;
+- escalabilidad.
 
-1. Antes de modificar código, analizar la estructura existente.
+No asumir que todos los proyectos futuros tendrán la misma estética,
+estructura o funcionalidades.
 
-2. No modificar archivos que no sean necesarios para la tarea solicitada.
 
-3. No eliminar funcionalidades existentes sin autorización.
+## 2. REGLA PRINCIPAL
 
-4. No modificar la identidad visual de un proyecto sin autorización.
+No modificar código que no sea necesario para cumplir la tarea solicitada.
 
-5. No cambiar colores, tipografías, imágenes o contenido sin indicación
-   explícita.
+Si el usuario solicita modificar una sección específica, trabajar
+principalmente sobre esa sección.
 
-6. Mantener siempre el comportamiento responsive.
+No aprovechar una solicitud puntual para rediseñar otras partes del sitio.
 
-7. Priorizar soluciones simples y mantenibles.
 
-8. Evitar duplicar código.
+## 3. ANTES DE MODIFICAR
 
-9. Antes de crear un componente nuevo, comprobar si puede reutilizarse
-   uno existente.
+Antes de escribir código:
 
-10. Mantener una estructura clara de archivos.
+1. Analizar la estructura existente.
+2. Revisar los archivos relacionados con la tarea.
+3. Identificar componentes reutilizables existentes.
+4. Determinar qué archivos necesitan modificarse.
+5. Detectar posibles dependencias o efectos secundarios.
 
-## Cambios
+Si existe una solución reutilizable, priorizarla antes de crear código
+duplicado.
 
-Cuando se solicite una modificación:
 
-1. Analizar primero el código existente.
-2. Identificar los archivos afectados.
-3. Explicar brevemente qué se va a modificar.
-4. Realizar únicamente los cambios necesarios.
-5. Verificar que el cambio no afecte otras partes del sitio.
-6. Comprobar desktop y mobile cuando corresponda.
-7. Informar qué archivos fueron modificados.
+## 4. CAMBIOS
 
-## Diseño
+Al realizar una modificación:
 
-No asumir decisiones de diseño que no hayan sido solicitadas.
+1. Modificar únicamente lo necesario.
+2. Mantener las funcionalidades existentes.
+3. Mantener la identidad visual existente salvo indicación contraria.
+4. No eliminar contenido sin autorización.
+5. No cambiar rutas o nombres de archivos innecesariamente.
+6. No agregar dependencias externas sin autorización.
+7. No introducir librerías innecesarias.
 
-Si existen varias soluciones posibles, priorizar la que:
 
-- sea más simple;
-- sea reutilizable;
-- mantenga coherencia con el proyecto;
-- tenga buen comportamiento responsive;
-- requiera menos código innecesario.
+## 5. DISEÑO
 
-## Imágenes
+No tomar decisiones importantes de diseño sin indicación.
 
-No reemplazar imágenes existentes sin autorización.
+No cambiar arbitrariamente:
 
-Evitar recortes innecesarios de imágenes.
+- colores;
+- tipografías;
+- logos;
+- imágenes;
+- tamaños;
+- espaciados;
+- estructura;
+- estilo visual.
 
-Utilizar el comportamiento de imagen apropiado según el componente
-(`cover`, `contain` u otra solución).
+Si una decisión visual es necesaria para implementar una función,
+utilizar la solución más coherente con el diseño existente.
 
-## Responsive
 
-Todo componente nuevo debe contemplar:
+## 6. IMÁGENES
+
+Las imágenes son parte importante del diseño.
+
+Antes de utilizar una imagen:
+
+- comprobar sus dimensiones y proporciones cuando sea necesario;
+- determinar si debe mostrarse completa o recortada;
+- evitar recortes innecesarios;
+- utilizar `object-fit: cover` únicamente cuando el diseño lo requiera;
+- utilizar `object-fit: contain` cuando sea importante conservar toda
+  la imagen;
+- utilizar `object-position` cuando sea necesario controlar el área
+  visible.
+
+Nunca asumir que `cover` es la solución correcta para todas las imágenes.
+
+
+## 7. RESPONSIVE
+
+Todo desarrollo debe funcionar correctamente en:
 
 - desktop;
-- tablet cuando sea necesario;
+- tablet cuando corresponda;
 - mobile.
 
-No considerar terminada una modificación visual sin comprobar su
-comportamiento responsive.
+No considerar terminada una modificación visual hasta comprobar
+su comportamiento en diferentes tamaños de pantalla.
 
-## JavaScript
+Evitar soluciones que funcionen únicamente en desktop.
+
+
+## 8. HTML
+
+Utilizar HTML5 semántico.
+
+Priorizar elementos como:
+
+- header;
+- nav;
+- main;
+- section;
+- article;
+- aside;
+- footer.
+
+Mantener una jerarquía correcta de títulos.
+
+Las imágenes deben utilizar atributos `alt` apropiados.
+
+
+## 9. CSS
+
+Mantener los estilos organizados.
+
+Priorizar:
+
+- variables CSS;
+- clases reutilizables;
+- componentes;
+- layouts consistentes;
+- media queries organizadas.
+
+Evitar:
+
+- estilos inline innecesarios;
+- valores repetidos;
+- CSS duplicado;
+- reglas excesivamente específicas;
+- `!important` salvo casos justificados.
+
+
+## 10. JAVASCRIPT
 
 Mantener JavaScript separado del HTML siempre que sea posible.
 
-Evitar scripts innecesarios.
+Priorizar código:
 
-Priorizar código claro y reutilizable.
+- simple;
+- legible;
+- reutilizable;
+- fácil de mantener.
 
-## HTML
+No utilizar JavaScript cuando CSS o HTML puedan resolver correctamente
+la necesidad.
 
-Utilizar HTML semántico.
 
-Mantener una jerarquía correcta de headings.
+## 11. COMPONENTES
 
-Utilizar atributos `alt` apropiados en imágenes.
+Antes de crear un componente:
 
-## CSS
+1. Buscar si ya existe uno equivalente.
+2. Determinar si puede reutilizarse.
+3. Si necesita una variante, evaluar crear una variante antes que
+   duplicar todo el componente.
 
-Evitar estilos inline salvo que exista una razón concreta.
+Los componentes deben ser suficientemente flexibles para diferentes
+proyectos, pero no deben convertirse en sistemas innecesariamente
+complejos.
 
-Reutilizar clases y variables cuando sea conveniente.
 
-Evitar duplicación de estilos.
+## 12. ACCESIBILIDAD
 
-## SEO
+Mantener buenas prácticas básicas:
 
-Mantener preparados los elementos básicos de SEO:
+- navegación mediante teclado;
+- estados `focus-visible`;
+- textos alternativos;
+- botones accesibles;
+- labels adecuados;
+- contraste razonable;
+- soporte para `prefers-reduced-motion`.
 
-- title;
+
+## 13. SEO
+
+Cuando corresponda, mantener:
+
+- `<title>`;
 - meta description;
+- viewport;
 - canonical;
 - Open Graph;
 - sitemap;
-- robots.txt.
+- robots.txt;
+- estructura semántica.
 
-No modificar configuraciones SEO existentes sin autorización.
+No modificar configuraciones SEO existentes sin necesidad.
 
-## Importante
 
-No interpretar una solicitud de cambio como permiso para rediseñar
-otras partes del sitio.
+## 14. CONTENIDO
 
-Si la tarea dice modificar X, modificar X.
+No inventar información sobre el cliente.
 
-No cambiar Y o Z simplemente porque se considere que podrían mejorarse.
+Si falta información necesaria:
+
+- utilizar contenido provisional claramente identificable;
+  o
+- solicitar la información necesaria.
+
+No presentar información inventada como real.
+
+
+## 15. DEPENDENCIAS
+
+No instalar librerías, frameworks o paquetes nuevos sin una razón clara.
+
+Antes de agregar una dependencia, evaluar si la funcionalidad puede
+resolverse con HTML, CSS o JavaScript nativo.
+
+
+## 16. VERIFICACIÓN
+
+Después de realizar cambios:
+
+1. Revisar errores de sintaxis.
+2. Verificar enlaces afectados.
+3. Comprobar que las imágenes carguen.
+4. Comprobar responsive.
+5. Comprobar que las funcionalidades existentes continúen funcionando.
+6. Revisar la consola del navegador cuando corresponda.
+
+
+## 17. INFORME DE CAMBIOS
+
+Al terminar una tarea, informar brevemente:
+
+### Archivos modificados
+- archivo 1
+- archivo 2
+
+### Cambios realizados
+- cambio 1
+- cambio 2
+
+### Verificación
+- desktop
+- mobile
+- funcionalidades relevantes
+
+Si algo no pudo verificarse, indicarlo claramente.
+
+
+## 18. PRIORIDAD
+
+En caso de conflicto entre instrucciones:
+
+1. Solicitud actual del usuario.
+2. Identidad y requisitos específicos del proyecto.
+3. Este archivo CLAUDE.md.
+4. Convenciones generales de la base.
+
+Nunca interpretar estas reglas como permiso para modificar elementos
+que el usuario no solicitó.
+
+
+## 19. PRINCIPIO GENERAL
+
+La prioridad no es escribir la mayor cantidad de código posible.
+
+La prioridad es producir el cambio correcto, con la menor cantidad
+de código innecesario y sin romper lo que ya funciona.
