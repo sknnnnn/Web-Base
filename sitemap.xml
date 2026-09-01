@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PLANTILLA DE SITEMAP
+  Reemplazar cada <loc> por la URL real del proyecto y <lastmod>
+  por la fecha real de la última modificación. Agregar una entrada
+  <url> por cada página del sitio.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <!-- PLACEHOLDER: reemplazar por el dominio real -->
+    <loc>https://www.EJEMPLO-DOMINIO.com/</loc>
+    <!-- PLACEHOLDER: reemplazar por la fecha real (YYYY-MM-DD) -->
+    <lastmod>YYYY-MM-DD</lastmod>
+  </url>
+</urlset>

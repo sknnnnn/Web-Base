@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# PLACEHOLDER: reemplazar por el dominio real del proyecto
+Sitemap: https://www.EJEMPLO-DOMINIO.com/sitemap.xml
