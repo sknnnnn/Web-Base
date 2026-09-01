@@ -1117,6 +1117,22 @@ p {
     display: inline-flex;
   }
 
+  .header-nav.is-open {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    padding: var(--space-md);
+    gap: var(--space-md);
+
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+  }
+
 }
 /* =========================
    FOOTER
