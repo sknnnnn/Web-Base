@@ -278,3 +278,15 @@ La prioridad no es escribir la mayor cantidad de código posible.
 
 La prioridad es producir el cambio correcto, con la menor cantidad
 de código innecesario y sin romper lo que ya funciona.
+
+
+## 20. METODOLOGÍA DE PROYECTO
+
+Este archivo regula el comportamiento de Claude a nivel código. El
+proceso de proyecto (etapas, aprobaciones, quality gates) vive en
+`metodologia/` y se aplica siempre que este repo se use como base de
+un proyecto real, sin contradecir ninguna regla de las anteriores.
+
+Ante cualquier duda de si algo requiere aprobación humana, la matriz
+de `metodologia/01-etapas-y-aprobaciones.md` es la referencia, no una
+suposición.
