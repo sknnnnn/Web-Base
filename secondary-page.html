@@ -8,34 +8,34 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <!-- PLACEHOLDER: reemplazar por el título real del proyecto -->
-  <title>[TÍTULO DEL PROYECTO] | [NOMBRE DEL CLIENTE]</title>
+  <!-- PLACEHOLDER: reemplazar por el título real de esta página -->
+  <title>[TÍTULO DE LA PÁGINA] | [NOMBRE DEL CLIENTE]</title>
 
-  <!-- PLACEHOLDER: reemplazar por la descripción real del proyecto -->
+  <!-- PLACEHOLDER: reemplazar por la descripción real de esta página -->
   <meta
     name="description"
-    content="[Descripción breve del sitio, 150-160 caracteres aprox.]"
+    content="[Descripción breve de esta página, 150-160 caracteres aprox.]"
   >
 
   <meta name="robots" content="index, follow">
 
-  <!-- PLACEHOLDER: reemplazar por la URL real del sitio -->
-  <link rel="canonical" href="https://www.EJEMPLO-DOMINIO.com/">
+  <!-- PLACEHOLDER: reemplazar por la URL real de esta página -->
+  <link rel="canonical" href="https://www.EJEMPLO-DOMINIO.com/secondary-page.html">
 
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 
   <!-- Open Graph (PLACEHOLDER: completar con datos reales del proyecto) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="[TÍTULO DEL PROYECTO]">
-  <meta property="og:description" content="[Descripción breve del sitio.]">
-  <meta property="og:url" content="https://www.EJEMPLO-DOMINIO.com/">
+  <meta property="og:title" content="[TÍTULO DE LA PÁGINA]">
+  <meta property="og:description" content="[Descripción breve de esta página.]">
+  <meta property="og:url" content="https://www.EJEMPLO-DOMINIO.com/secondary-page.html">
   <meta property="og:image" content="[URL de la imagen para compartir, ej: assets/img/og-image.jpg]">
   <meta property="og:locale" content="es_ES">
 
   <!-- Twitter Card (PLACEHOLDER: completar con datos reales del proyecto) -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="[TÍTULO DEL PROYECTO]">
-  <meta name="twitter:description" content="[Descripción breve del sitio.]">
+  <meta name="twitter:title" content="[TÍTULO DE LA PÁGINA]">
+  <meta name="twitter:description" content="[Descripción breve de esta página.]">
   <meta name="twitter:image" content="[URL de la imagen para compartir, ej: assets/img/og-image.jpg]">
 
   <link rel="stylesheet" href="assets/css/style.css">
@@ -45,10 +45,12 @@
 
   <!--
     CONTENIDO DE DEMOSTRACIÓN
-    Todo el texto, marca "WEB BASE" y secciones de este archivo son
-    contenido de ejemplo para mostrar la estructura y los componentes
-    de la plantilla. Al iniciar un proyecto real, reemplazar por el
-    contenido, marca y copy definitivos del cliente.
+    Esta página es la referencia estructural del "Secondary-page
+    pattern" de Web-Base: demuestra cómo repetir header, footer y
+    navegación en una segunda página real, sin sistema de includes,
+    templating ni build step. Todo el texto es de ejemplo. Al iniciar
+    un proyecto real, reemplazar por el contenido definitivo o
+    eliminar esta página si no aplica.
   -->
 
   <!-- HEADER -->
@@ -60,15 +62,15 @@
       </a>
 
       <nav class="header-nav" aria-label="Navegación principal">
-        <a href="#inicio" aria-current="page">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a href="secondary-page.html">Página secundaria</a>
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a href="secondary-page.html" aria-current="page">Página secundaria</a>
       </nav>
 
       <div class="header-actions">
-        <a href="#contacto" class="btn btn-primary">
+        <a href="index.html#contacto" class="btn btn-primary">
           Contactar
         </a>
       </div>
@@ -89,34 +91,25 @@
   <!-- CONTENIDO PRINCIPAL -->
   <main>
 
-    <!-- HERO -->
-    <section id="inicio" class="section">
+    <!-- PAGE HEADER -->
+    <section class="section-sm">
       <div class="container">
 
         <div class="max-width-lg">
 
           <p class="text-small text-muted">
-            BASE WEB
+            PÁGINA SECUNDARIA
           </p>
 
           <h1>
-            Una base sólida para construir sitios web.
+            Ejemplo de página secundaria.
           </h1>
 
           <p class="text-lg">
-            Estructura, diseño responsive y componentes reutilizables
-            para comenzar nuevos proyectos de forma rápida y ordenada.
+            Esta página demuestra cómo reutilizar el header, el footer
+            y el sistema de componentes de Web-Base en una segunda
+            página real, sin agregar ningún componente nuevo.
           </p>
-
-          <div class="flex gap-md">
-            <a href="#servicios" class="btn btn-primary">
-              Explorar
-            </a>
-
-            <a href="#contacto" class="btn btn-outline">
-              Contactar
-            </a>
-          </div>
 
         </div>
 
@@ -124,22 +117,24 @@
     </section>
 
 
-    <!-- SERVICIOS -->
-    <section id="servicios" class="section">
+    <!-- CONTENIDO -->
+    <section class="section">
       <div class="container">
 
         <div class="max-width-md">
           <p class="text-small text-muted">
-            SISTEMA
+            CONTENIDO
           </p>
 
           <h2>
-            Componentes reutilizables
+            Composición con primitives existentes
           </h2>
 
           <p>
-            Una estructura preparada para adaptarse a distintos tipos
-            de proyectos.
+            Todo lo que ves en esta página usa las mismas clases que
+            ya existen en <code>style.css</code>: contenedores,
+            secciones, tipografía, cards y botones. No se creó ningún
+            componente nuevo para esta página.
           </p>
         </div>
 
@@ -151,67 +146,49 @@
             <div class="card-content">
 
               <h3 class="card-title">
-                Diseño
-              </h3>
-
-              <p class="card-description">
-                Sistema visual flexible preparado para diferentes
-                identidades de marca.
-              </p>
-
-              <div class="card-footer">
-                <span class="text-small">
-                  Sistema visual
-                </span>
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="card">
-
-            <div class="card-content">
-
-              <h3 class="card-title">
-                Responsive
-              </h3>
-
-              <p class="card-description">
-                Componentes preparados para funcionar correctamente
-                en desktop, tablet y mobile.
-              </p>
-
-              <div class="card-footer">
-                <span class="text-small">
-                  Mobile first
-                </span>
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <article class="card">
-
-            <div class="card-content">
-
-              <h3 class="card-title">
                 Reutilizable
               </h3>
 
               <p class="card-description">
-                Una base que puede adaptarse a distintos tipos de
-                sitios y clientes.
+                El mismo header, footer y sistema de navegación de la
+                página principal, repetidos sin duplicar lógica.
               </p>
 
-              <div class="card-footer">
-                <span class="text-small">
-                  Componentes
-                </span>
-              </div>
+            </div>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-content">
+
+              <h3 class="card-title">
+                Sin includes
+              </h3>
+
+              <p class="card-description">
+                El markup se repite directamente en cada archivo HTML,
+                de forma deliberada, sin build step ni templating.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-content">
+
+              <h3 class="card-title">
+                Navegación real
+              </h3>
+
+              <p class="card-description">
+                Esta página y la principal se enlazan entre sí con
+                links reales, no con anclas.
+              </p>
 
             </div>
 
@@ -223,63 +200,22 @@
     </section>
 
 
-    <!-- NOSOTROS -->
-    <section id="nosotros" class="section">
+    <!-- CTA -->
+    <section class="section-sm">
       <div class="container">
 
-        <div class="content-split">
-
-          <div>
-            <p class="text-small text-muted">
-              SOBRE LA BASE
-            </p>
-
-            <h2>
-              Construida para crecer.
-            </h2>
-          </div>
-
-          <div>
-            <p>
-              Esta estructura funciona como punto de partida para
-              nuevos proyectos web.
-            </p>
-
-            <p>
-              Cada proyecto puede incorporar su propia identidad,
-              contenido, componentes y funcionalidades sin perder
-              una estructura organizada.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="section">
-      <div class="container">
-
-        <div class="max-width-md">
-
-          <p class="text-small text-muted">
-            CONTACTO
-          </p>
+        <div class="max-width-md text-center">
 
           <h2>
-            Comencemos un proyecto.
+            ¿Listo para el siguiente paso?
           </h2>
 
           <p>
-            Esta sección puede adaptarse posteriormente al sistema
-            de contacto de cada proyecto.
+            Volvé a la página principal para ver el resto del sistema.
           </p>
 
-          <!-- PLACEHOLDER: reemplazar por el email real de contacto -->
-          <a href="mailto:contacto@ejemplo.com" class="btn btn-primary">
-            Contactar
+          <a href="index.html" class="btn btn-primary">
+            Volver al inicio
           </a>
 
         </div>
@@ -316,10 +252,10 @@
             Navegación
           </h3>
 
-          <a href="#inicio">Inicio</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#nosotros">Nosotros</a>
-          <a href="#contacto">Contacto</a>
+          <a href="index.html#inicio">Inicio</a>
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#nosotros">Nosotros</a>
+          <a href="index.html#contacto">Contacto</a>
 
         </div>
 

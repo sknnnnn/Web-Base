@@ -280,13 +280,9 @@ La prioridad es producir el cambio correcto, con la menor cantidad
 de código innecesario y sin romper lo que ya funciona.
 
 
-## 20. METODOLOGÍA DE PROYECTO
+## 20. QA TÉCNICO
 
-Este archivo regula el comportamiento de Claude a nivel código. El
-proceso de proyecto (etapas, aprobaciones, quality gates) vive en
-`metodologia/` y se aplica siempre que este repo se use como base de
-un proyecto real, sin contradecir ninguna regla de las anteriores.
-
-Ante cualquier duda de si algo requiere aprobación humana, la matriz
-de `metodologia/01-etapas-y-aprobaciones.md` es la referencia, no una
-suposición.
+Antes de dar por terminada una tarea con impacto en HTML/CSS/JS,
+revisar `docs/qa-checklist.md` — contiene los criterios técnicos
+verificables (semántica, accesibilidad, responsive, consola, links,
+formularios, SEO) que esta base debe cumplir.

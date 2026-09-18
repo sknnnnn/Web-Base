@@ -21,3 +21,25 @@
     }
   });
 })();
+
+
+/* =========================
+   LOADING EN ENVÍO DE FORMULARIOS
+   ========================= */
+
+(function () {
+  const forms = document.querySelectorAll('form');
+
+  if (!forms.length) return;
+
+  forms.forEach(function (form) {
+    form.addEventListener('submit', function () {
+      const submitButton = form.querySelector('[type="submit"]');
+
+      if (!submitButton) return;
+
+      submitButton.classList.add('is-loading');
+      submitButton.disabled = true;
+    });
+  });
+})();

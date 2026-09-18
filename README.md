@@ -28,15 +28,7 @@ cliente en particular: es un molde.
 - `robots.txt` y `sitemap.xml` de ejemplo.
 - Accesibilidad básica (`focus-visible`, `aria-*`, soporte para
   `prefers-reduced-motion`).
-
-## Metodología
-
-`metodologia/` contiene el sistema de trabajo reutilizable de MACARIO:
-las 12 etapas de un proyecto (Intake → Cierre), la matriz de qué puede
-resolver Claude solo y qué requiere aprobación, los quality gates, la
-integración con el resto del ecosistema (Linear, GitHub, Obsidian,
-etc.) y los templates a completar en cada proyecto real. Ver
-`metodologia/README.md`.
+- Checklist de QA técnico reutilizable (`docs/qa-checklist.md`).
 
 ## Qué NO contiene
 
@@ -97,18 +89,11 @@ Web-Base/
 │   ├── img/
 │   └── icons/
 │       └── favicon.svg
-├── metodologia/
-│   ├── README.md
-│   ├── 01-etapas-y-aprobaciones.md
-│   ├── 02-flujo-nuevo-proyecto.md
-│   ├── 03-quality-gates.md
-│   ├── 04-integracion-ecosistema.md
-│   ├── 05-documentacion-permanente.md
-│   ├── PENDIENTES.md
-│   └── templates/
+├── docs/
+│   └── qa-checklist.md
 └── .claude/
-    ├── skills/metodologia/SKILL.md
-    └── commands/nuevo-proyecto.md
+    └── commands/
+        └── nuevo-proyecto.md
 ```
 
 ## Flujo general: GitHub → Cloudflare

@@ -1,48 +1,34 @@
 ---
-description: Scaffolding de un proyecto nuevo clonado desde Web-Base — crea proyecto/ con los templates de las etapas 01-06 listos para completar.
+description: Scaffolding técnico mínimo al arrancar un proyecto nuevo creado desde el Template de Web-Base.
 ---
 
-Este comando prepara un proyecto NUEVO, en su propio repositorio
-clonado desde Web-Base. Su única responsabilidad es ese scaffolding
-inicial — **no** es una forma de acumular proyectos dentro de
-Web-Base. Web-Base es la plantilla maestra y nunca debe convertirse en
-contenedor de trabajo real de ningún cliente (ver `README.md`, sección
-"Cómo usarlo como punto de partida").
+Este comando prepara mínimamente un proyecto NUEVO, ya creado como
+repositorio independiente a partir del Template de Web-Base en
+GitHub. No es una forma de gestionar documentación de proyecto ni de
+acumular trabajo real dentro de Web-Base — ver `README.md`, sección
+"Cómo usarlo como punto de partida".
 
 Hacer, en este orden:
 
-1. Confirmar que existe `metodologia/templates/` en este repo. Si no
-   existe, avisar que este comando solo aplica sobre un proyecto
-   clonado de Web-Base y detenerse.
-2. Verificar que este repo NO sea el repositorio maestro `Web-Base`
+1. Verificar que este repo NO sea el repositorio maestro `Web-Base`
    en sí (revisar el remoto de git y/o preguntar directamente si hay
    dudas). Si parece ser el propio Web-Base, o no hay certeza de que
-   sea un clon para un cliente específico, **detenerse y preguntar**
-   antes de crear nada — nunca asumir.
-3. Preguntar el nombre del cliente/proyecto si no se dio como
-   argumento.
-4. Crear la carpeta `proyecto/` en la raíz de este repo (el proyecto
-   nuevo, no Web-Base) si no existe.
-5. Copiar dentro de `proyecto/` los siguientes templates, sin
-   modificar los originales en `metodologia/templates/`:
-   - `intake.md`
-   - `contexto.md`
-   - `discovery.md`
-   - `alcance.md`
-   - `arquitectura.md`
-   - `direccion-visual.md`
-6. En `proyecto/intake.md`, completar el campo `[NOMBRE DEL
-   PROYECTO/CLIENTE]` con el nombre dado y `[YYYY-MM-DD]` con la fecha
-   de hoy. No completar ningún otro campo ni inventar información:
-   el resto se completa con el cliente durante Intake real.
-7. Informar al usuario qué se creó y recordar que el siguiente paso es
-   completar `proyecto/intake.md` (etapa 01) antes de avanzar a
-   Contexto.
+   sea un proyecto independiente, **detenerse y preguntar** antes de
+   continuar — nunca asumir.
+2. Preguntar el nombre del proyecto si no se dio como argumento.
+3. Confirmar al usuario que el repositorio ya cuenta con la base
+   técnica de Web-Base y está listo para empezar a trabajar, y
+   recordar que la documentación permanente del proyecto (contexto,
+   alcance, arquitectura, etc.) se gestiona en MACARIO, no en este
+   repositorio.
 
 Límites:
-- No crear ningún otro archivo. No tocar `assets/`, `index.html` ni
-  nada fuera de `proyecto/`.
-- No usar, copiar ni referenciar contenido, nombres o datos de otros
-  proyectos (Raíces, Onda, GXK, CONCRETO, ITS o cualquier cliente
-  real): este comando es genérico para cualquier proyecto nuevo.
+- No crear ninguna carpeta ni archivo de documentación (`proyecto/`,
+  templates de etapas, notas de contexto/alcance/arquitectura, etc.).
+- No tocar `assets/`, `index.html` ni ningún archivo técnico de la
+  base.
+- No leer, copiar ni modificar nada del vault de MACARIO.
+- No decidir alcance, arquitectura ni identidad visual.
+- No crear el repositorio en GitHub (ya debe existir, creado desde el
+  Template).
 - No hacer commit ni push.

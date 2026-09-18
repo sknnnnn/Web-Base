@@ -8,3 +8,6 @@ Thumbs.db
 
 # Archivos temporales/locales
 *.log
+
+# Claude Code (instrucciones personales, no versionadas)
+CLAUDE.local.md
