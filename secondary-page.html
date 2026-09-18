@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
 
+  <!-- DEMO — THEMING: aplica el theme guardado antes del primer paint -->
+  <script>
+    (function () {
+      if (localStorage.getItem('theme') === 'alt') {
+        document.documentElement.setAttribute('data-theme', 'alt');
+      }
+    })();
+  </script>
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
@@ -200,6 +209,66 @@
     </section>
 
 
+    <!-- TABLA -->
+    <section class="section-sm">
+      <div class="container">
+
+        <div class="max-width-md">
+          <p class="text-small text-muted">
+            TABLA
+          </p>
+
+          <h2>
+            Tabla base
+          </h2>
+
+          <p>
+            Estilo base para tablas HTML semánticas (<code>.table</code>),
+            con un wrapper responsive (<code>.table-responsive</code>) y
+            una variante de filas alternadas (<code>.table-striped</code>),
+            reutilizando los mismos tokens de color y spacing del resto
+            de la Foundation.
+          </p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Componente</th>
+                <th scope="col">Clase principal</th>
+                <th scope="col">Tokens principales</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Botones</td>
+                <td><code>.btn</code></td>
+                <td><code>--color-primary</code></td>
+              </tr>
+              <tr>
+                <td>Cards</td>
+                <td><code>.card</code></td>
+                <td><code>--color-border</code></td>
+              </tr>
+              <tr>
+                <td>Formularios</td>
+                <td><code>.input</code></td>
+                <td><code>--color-border</code></td>
+              </tr>
+              <tr>
+                <td>Feedback</td>
+                <td><code>.alert</code></td>
+                <td><code>--color-surface</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+
     <!-- CTA -->
     <section class="section-sm">
       <div class="container">
@@ -308,6 +377,22 @@
 
   </footer>
 
+
+  <!--
+    DEMO — THEMING (Foundation)
+    Control de demostración para alternar entre el theme base y el
+    theme "alt" definido en assets/css/style.css. No es una
+    funcionalidad de producto: sirve para validar que Web-Base puede
+    cambiar de identidad visual sin reescribir componentes. Eliminar
+    este botón al iniciar un proyecto real.
+  -->
+  <button
+    type="button"
+    class="btn btn-outline btn-sm theme-demo-toggle"
+    aria-pressed="false"
+  >
+    Tema: Base
+  </button>
 
   <script src="assets/js/main.js"></script>
 

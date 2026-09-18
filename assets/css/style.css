@@ -104,6 +104,31 @@
 }
 
 /* =========================
+   THEME — VARIANTE ALTERNATIVA (demo)
+   =========================
+   Segunda identidad visual, activada con `data-theme="alt"` en
+   <html>, que demuestra que Web-Base puede cambiar de tema
+   redefiniendo únicamente tokens de color — sin tocar componentes,
+   layout ni el resto de los tokens (spacing, radius, tipografía,
+   shadows, transitions). Los tokens de estado (success/warning/error)
+   no se redefinen a propósito: su significado se mantiene igual en
+   cualquier theme.
+   ========================= */
+
+:root[data-theme="alt"] {
+  --color-primary: #1f3a2e;
+  --color-secondary: #5c3a21;
+  --color-accent: #c2540f;
+
+  --color-background: #fffdfa;
+  --color-surface: #f8f6f1;
+
+  --color-text: #231a12;
+  --color-text-muted: #7a6a58;
+  --color-border: #ddd0bc;
+}
+
+/* =========================
    RESET
    ========================= */
 
@@ -202,10 +227,6 @@ ol {
 
 .hidden {
   display: none !important;
-}
-
-.flex {
-  display: flex;
 }
 
 .grid {
@@ -1519,4 +1540,69 @@ legend {
 
 .alert-success {
   border-left-color: var(--color-success);
+}
+/* =========================
+   TABLA
+   ========================= */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: var(--space-sm) var(--space-md);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  font-weight: 700;
+}
+
+
+/* =========================
+   CONTENEDOR RESPONSIVE
+   ========================= */
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+
+/* =========================
+   VARIANTE — FILAS ALTERNADAS
+   ========================= */
+
+.table-striped tbody tr:nth-child(even) {
+  background-color: var(--color-surface);
+}
+/* =========================
+   DEMO — SELECTOR DE THEME
+   =========================
+   Control exclusivo para demostrar el sistema de Theming de la
+   Foundation. No es un componente de producto: eliminar junto con
+   el botón en el HTML al iniciar un proyecto real.
+   ========================= */
+
+.theme-demo-toggle {
+  position: fixed;
+  /* Debajo del header (min-height: 72px, ver .header-container) en vez
+     de bottom-right: evita tapar contenido real como los links del
+     footer, que sí puede quedar bajo un botón fixed en páginas cortas. */
+  top: calc(72px + var(--space-md));
+  right: var(--space-lg);
+  z-index: var(--z-sticky);
+
+  background-color: var(--color-background);
+}
+
+@media (max-width: 600px) {
+  .theme-demo-toggle {
+    right: var(--space-md);
+  }
 }

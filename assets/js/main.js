@@ -43,3 +43,42 @@
     });
   });
 })();
+
+
+/* =========================
+   DEMO — SELECTOR DE THEME
+   =========================
+   Alterna el atributo data-theme del documento para demostrar el
+   sistema de Theming de la Foundation. No es lógica de producto.
+   ========================= */
+
+(function () {
+  const toggle = document.querySelector('.theme-demo-toggle');
+
+  if (!toggle) return;
+
+  const root = document.documentElement;
+
+  function syncLabel() {
+    const isAlt = root.getAttribute('data-theme') === 'alt';
+
+    toggle.textContent = isAlt ? 'Tema: Alt' : 'Tema: Base';
+    toggle.setAttribute('aria-pressed', String(isAlt));
+  }
+
+  toggle.addEventListener('click', function () {
+    const isAlt = root.getAttribute('data-theme') === 'alt';
+
+    if (isAlt) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'base');
+    } else {
+      root.setAttribute('data-theme', 'alt');
+      localStorage.setItem('theme', 'alt');
+    }
+
+    syncLabel();
+  });
+
+  syncLabel();
+})();

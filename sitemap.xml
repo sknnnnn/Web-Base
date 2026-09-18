@@ -12,4 +12,10 @@
     <!-- PLACEHOLDER: reemplazar por la fecha real (YYYY-MM-DD) -->
     <lastmod>YYYY-MM-DD</lastmod>
   </url>
+  <url>
+    <!-- PLACEHOLDER: reemplazar por el dominio real -->
+    <loc>https://www.EJEMPLO-DOMINIO.com/secondary-page.html</loc>
+    <!-- PLACEHOLDER: reemplazar por la fecha real (YYYY-MM-DD) -->
+    <lastmod>YYYY-MM-DD</lastmod>
+  </url>
 </urlset>

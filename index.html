@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
 
+  <!-- DEMO — THEMING: aplica el theme guardado antes del primer paint -->
+  <script>
+    (function () {
+      if (localStorage.getItem('theme') === 'alt') {
+        document.documentElement.setAttribute('data-theme', 'alt');
+      }
+    })();
+  </script>
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
@@ -372,6 +381,22 @@
 
   </footer>
 
+
+  <!--
+    DEMO — THEMING (Foundation)
+    Control de demostración para alternar entre el theme base y el
+    theme "alt" definido en assets/css/style.css. No es una
+    funcionalidad de producto: sirve para validar que Web-Base puede
+    cambiar de identidad visual sin reescribir componentes. Eliminar
+    este botón al iniciar un proyecto real.
+  -->
+  <button
+    type="button"
+    class="btn btn-outline btn-sm theme-demo-toggle"
+    aria-pressed="false"
+  >
+    Tema: Base
+  </button>
 
   <script src="assets/js/main.js"></script>
 

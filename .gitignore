@@ -11,3 +11,6 @@ Thumbs.db
 
 # Claude Code (instrucciones personales, no versionadas)
 CLAUDE.local.md
+
+# Codex (configuración local de la herramienta, no versionada)
+.codex/

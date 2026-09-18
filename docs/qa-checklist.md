@@ -90,8 +90,9 @@ Checklist específico de la Foundation de feedback inline (`.alert`,
 - [ ] Los mensajes no dependen únicamente del color para comunicar su significado.
 
 **Nota de mantenimiento:** `--color-success` fue validado en aproximadamente
-`3.02:1` contra `--color-surface`, por lo que cualquier cambio futuro a ese
-token debe volver a verificarse.
+`3.02:1` contra `--color-surface` en el theme base (`3.05:1` en el theme
+`alt`), por lo que cualquier cambio futuro a esos tokens —en cualquier
+theme— debe volver a verificarse.
 
 ### Accesibilidad
 
@@ -128,3 +129,56 @@ token debe volver a verificarse.
 - [ ] `main.js` no contiene lógica específica para `.alert`.
 - [ ] No existen errores ni warnings de consola asociados a Feedback.
 - [ ] El componente funciona como HTML + CSS independiente.
+
+## Theming
+
+Checklist específico del sistema de themes (`:root[data-theme="alt"]` en
+`assets/css/style.css`).
+
+- [ ] El theme `alt` solo redefine tokens de color (`--color-primary`,
+      `--color-secondary`, `--color-accent`, `--color-background`,
+      `--color-surface`, `--color-text`, `--color-text-muted`,
+      `--color-border`); spacing, radius, tipografía, shadows y
+      transitions no cambian entre themes.
+- [ ] Los tokens de estado (`--color-success`, `--color-warning`,
+      `--color-error`) mantienen el mismo valor en ambos themes.
+- [ ] Header, footer, botones (todas las variantes), cards, links,
+      forms, alerts y `secondary-page.html` responden correctamente
+      al cambiar `data-theme`.
+- [ ] El texto blanco hardcodeado sobre `--color-primary`/
+      `--color-secondary` (botones, footer) mantiene contraste
+      suficiente en cualquier theme nuevo — si un theme futuro usa un
+      primary/secondary claro, ese hardcodeo debe reemplazarse por un
+      token (p. ej. `--color-on-primary`).
+- [ ] `:focus-visible`, `disabled`, `has-error` y `is-loading` se ven
+      correctamente en ambos themes.
+- [ ] El toggle de demo (`.theme-demo-toggle`) no forma parte del
+      contenido real de un proyecto: debe eliminarse junto con su
+      script en `main.js` al iniciar un proyecto sobre esta base.
+
+**Nota de mantenimiento:** `.theme-demo-toggle` se posiciona fixed
+debajo del header (`top`), no en `bottom` — en `bottom-right` llegó a
+superponerse al link "Facebook" del footer en viewports angostos con
+poco contenido. Si se reubica, volver a verificar que no tape footer,
+CTAs ni el dropdown del menú mobile abierto.
+
+## Tables
+
+Checklist específico de la Foundation de tablas (`.table`,
+`.table-responsive`, `.table-striped`).
+
+- [ ] La tabla usa marcado semántico real (`table`, `thead`, `tbody`,
+      `th`, `td`), con `th scope="col"` en los encabezados de columna.
+- [ ] Bordes y padding de celda usan los tokens existentes
+      (`--color-border`, `--space-sm`/`--space-md`), sin valores
+      hardcodeados.
+- [ ] La tabla está envuelta en `.table-responsive` cuando puede
+      superar el ancho disponible.
+- [ ] En mobile, `.table-responsive` permite scroll horizontal
+      contenido sin generar overflow del documento.
+- [ ] La tabla hereda correctamente bordes, superficie (`.table-striped`)
+      y tipografía en el theme base y en `data-theme="alt"`.
+- [ ] No genera overflow horizontal del viewport en 900px, 600px ni
+      375px.
+- [ ] No introduce elementos focuseables ni interactivos dentro de la
+      tabla (no interfiere en la navegación por teclado).

@@ -15,12 +15,19 @@ cliente en particular: es un molde.
 
 ## Qué contiene
 
-- Estructura HTML5 semántica de una página de ejemplo (`index.html`).
+- Estructura HTML5 semántica de una página de ejemplo (`index.html`)
+  y una segunda página real (`secondary-page.html`) que demuestra el
+  patrón Secondary Page: header, footer y navegación reutilizados sin
+  includes ni build step.
 - Sistema de diseño en CSS basado en variables (colores, tipografía,
   espaciado, contenedores, sombras, transiciones).
-- Sistema de utilidades (grids, flex, anchos, espaciados).
+- Sistema de utilidades (grids, flex, anchos, espaciados) y base
+  responsive (breakpoints en 900px y 600px).
 - Componentes reutilizables en CSS: botones, cards, sistema de
-  imágenes, header y footer.
+  imágenes, header, footer, formularios (Forms), feedback inline
+  (`.alert`) y tablas (`.table`).
+- Theming: theme base y una variante alternativa (`data-theme="alt"`)
+  que redefine solo los tokens de color, sin tocar componentes.
 - Menú mobile funcional (`assets/js/main.js`).
 - SEO técnico básico dejado como plantilla (title, description,
   canonical, Open Graph, Twitter Card).
@@ -71,6 +78,30 @@ el código:
 - `robots.txt` y `sitemap.xml` (dominio real y fechas).
 - Imágenes reales en `assets/img/` y `assets/icons/`.
 
+## Theming
+
+`Web-Base` puede cambiar de identidad visual sin reescribir
+componentes: los colores viven en variables CSS dentro de `:root` en
+`assets/css/style.css`, y una segunda variante (`:root[data-theme="alt"]`)
+redefine únicamente esos tokens de color (primary, secondary, accent,
+background, surface, text, text-muted, border). Spacing, radius,
+tipografía, shadows y transitions son compartidos por todos los themes.
+
+Para activar el theme alternativo en un proyecto real:
+
+```html
+<html lang="es" data-theme="alt">
+```
+
+o vía JS: `document.documentElement.setAttribute('data-theme', 'alt')`.
+
+`index.html` y `secondary-page.html` incluyen un botón de demostración
+(`.theme-demo-toggle`, con su lógica en `assets/js/main.js`) que
+alterna entre ambos themes y persiste la elección en `localStorage`
+solo para validar el sistema — no es parte del contenido de un
+proyecto real y debe eliminarse (botón + bloque JS correspondiente)
+al iniciar uno.
+
 ## Estructura de carpetas
 
 ```
@@ -78,6 +109,7 @@ Web-Base/
 ├── CLAUDE.md
 ├── README.md
 ├── index.html
+├── secondary-page.html
 ├── robots.txt
 ├── sitemap.xml
 ├── .gitignore
