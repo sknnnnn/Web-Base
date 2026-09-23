@@ -41,6 +41,8 @@ accesibilidad y reduced-motion → tipografía → botones → cards →
 sistema de imágenes → layouts (flex/grid) → header → footer →
 formularios → feedback → tablas → demo de theme.
 
+- Esta sección (tokens, themes y componentes CSS) constituye la Visual
+  Foundation de Web-Base; ver [sistema-visual.md](sistema-visual.md).
 - **Tokens** en `:root`: colores (`--color-*`, incluidos los de estado
   success/warning/error), tipografía (`--font-*`, `--font-size-*`),
   espaciado (`--space-*`), contenedores (`--container-*`), radios,
