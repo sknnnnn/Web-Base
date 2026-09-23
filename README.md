@@ -13,6 +13,22 @@ sin reconstruir la arquitectura desde cero cada vez.
 `Web-Base` **no es un sitio en producción** ni el sitio de ningún
 cliente en particular: es un molde.
 
+## Rol en el ecosistema
+
+```
+PRANA → MACARIO → Web-Base → Proyectos
+```
+
+- **PRANA**: marca / negocio externo.
+- **MACARIO**: sistema interno de ejecución y producción.
+- **Web-Base**: foundation técnica reutilizable (este repositorio).
+- **Proyectos**: implementaciones concretas, cada una en su repositorio.
+
+Web-Base no absorbe la documentación estratégica de PRANA, de MACARIO
+ni de cada proyecto: solo documenta la base técnica y aprende de los
+proyectos cuando surge algo realmente reutilizable. Documentación
+completa en [`docs/`](docs/README.md).
+
 ## Qué contiene
 
 - Estructura HTML5 semántica de una página de ejemplo (`index.html`)
@@ -36,6 +52,9 @@ cliente en particular: es un molde.
 - Accesibilidad básica (`focus-visible`, `aria-*`, soporte para
   `prefers-reduced-motion`).
 - Checklist de QA técnico reutilizable (`docs/qa-checklist.md`).
+- Documentación técnica de la foundation en `docs/` (propósito,
+  arquitectura, desarrollo, diseño → código, features, QA, SEO y
+  evolución).
 
 ## Qué NO contiene
 
@@ -46,8 +65,12 @@ cliente en particular: es un molde.
 - Sistema de inclusión de componentes por servidor o build: los
   componentes son bloques de HTML/CSS reutilizables, no archivos
   separados que se "incluyen" automáticamente.
-- Páginas de ejemplo adicionales ni funcionalidades específicas de
-  un proyecto (formularios conectados, analytics, integraciones).
+- Más páginas de ejemplo que `index.html` y `secondary-page.html`, ni
+  funcionalidades específicas de un proyecto (formularios conectados,
+  analytics, integraciones).
+- Documentación estratégica o de contexto de PRANA, MACARIO o de un
+  proyecto (contexto, alcance, wireframes, decisiones visuales): vive
+  en su lugar de origen.
 
 ## Cómo usarlo como punto de partida
 
@@ -122,7 +145,15 @@ Web-Base/
 │   └── icons/
 │       └── favicon.svg
 ├── docs/
-│   └── qa-checklist.md
+│   ├── README.md            índice y rol en el ecosistema
+│   ├── proposito.md
+│   ├── arquitectura.md
+│   ├── desarrollo.md
+│   ├── diseno-a-codigo.md
+│   ├── features.md
+│   ├── qa-checklist.md
+│   ├── seo-performance.md
+│   └── evolucion.md
 └── .claude/
     └── commands/
         └── nuevo-proyecto.md
