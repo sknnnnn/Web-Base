@@ -13,14 +13,16 @@ Web-Base  → foundation técnica reutilizable   ← este repositorio
 Proyectos → implementaciones concretas (un repositorio por proyecto)
 ```
 
-Web-Base documenta **solo** la base técnica reutilizable. No absorbe:
+Web-Base documenta **solo** su base técnica reutilizable, incluido su
+propio sistema visual base (tokens, themes y componentes). No absorbe:
 
 - estrategia de marca ni reglas de PRANA;
 - metodología, etapas, aprobaciones o documentación permanente de
   MACARIO;
 - contexto, arquitectura de información, wireframes, blueprint ni
-  decisiones visuales de cada proyecto (viven en el proyecto, en
-  MACARIO y/o en Figma).
+  identidad visual, dirección de arte o decisiones visuales
+  específicas de cada proyecto (viven en el proyecto, en MACARIO y/o
+  en Figma).
 
 Detalle de qué pertenece y qué no: [proposito.md](proposito.md).
 

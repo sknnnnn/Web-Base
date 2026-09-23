@@ -16,7 +16,10 @@ Candidato si cumple **todas**:
 2. Ya funcionó en un proyecto real (no es especulativo).
 3. Sirve a otro proyecto sin cambios, o cambiando solo valores de
    tokens.
-4. Puede expresarse con HTML/CSS/JS nativo, sin dependencias nuevas.
+4. Evita complejidad y dependencias innecesarias: se prefiere HTML/CSS/JS
+   nativo. Una nueva dependencia solo puede incorporarse si hay una
+   justificación técnica clara, aporta valor reutilizable y cuenta con
+   autorización explícita (`CLAUDE.md` §4 y §15).
 5. No contiene contenido, marca ni identidad de un cliente.
 
 Si se cumple 1–2 pero no 3, queda en el proyecto (o se documenta como

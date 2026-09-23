@@ -39,13 +39,24 @@ Investigación / contexto → UX/UI → Figma → implementación con Claude Cod
    → Web-Base / componentes reutilizables → proyecto → QA → analytics / operación
 ```
 
-Web-Base interviene desde la implementación en adelante (tokens,
-componentes, patrones, QA técnico). Las etapas previas y la operación
+Web-Base no es una etapa obligatoria ni rígida del workflow. Cumple dos
+funciones:
+
+- **Durante la implementación**: foundation técnica reutilizable
+  (tokens, componentes, patrones, QA técnico) de la que parte el
+  proyecto.
+- **Después de los proyectos**: repositorio donde se consolidan los
+  patrones, componentes y aprendizajes que resultaron reutilizables
+  (ver [evolucion.md](evolucion.md)).
+
+Las etapas previas (investigación, UX/UI, Figma) y la operación
 pertenecen a MACARIO y a cada proyecto.
 
 ## Qué pertenece a Web-Base
 
-- Tokens y sistema de theming (`:root` y `data-theme`).
+- Su propio sistema técnico y visual base: tokens por defecto, theming
+  (`:root` y `data-theme`) y el aspecto base de sus componentes, con su
+  documentación.
 - Componentes y patrones técnicos reutilizables en más de un proyecto.
 - Convenciones de HTML, CSS y JS, y reglas de trabajo con Claude Code.
 - Checklist de QA técnico.
@@ -64,6 +75,11 @@ pertenecen a MACARIO y a cada proyecto.
 | Decisiones visuales específicas (paleta final, tipografías, imágenes, layouts) | Proyecto / Figma |
 | Contenido, textos e imágenes de un cliente | Proyecto |
 | Integraciones, analytics o funcionalidades específicas de un proyecto | Proyecto |
+
+Web-Base sí documenta su sistema visual base. Lo que no documenta es la
+identidad visual, la dirección de arte y las decisiones específicas de
+cada proyecto: eso permanece en el proyecto correspondiente y/o en
+Figma.
 
 Regla práctica: si al leerlo solo tiene sentido para un proyecto o una
 marca, no va en Web-Base. Si sirve tal cual (o con tokens distintos) a

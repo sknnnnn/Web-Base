@@ -21,12 +21,13 @@ Web-Base **no** contiene guías de identidad visual de ningún proyecto
 
 ## Cómo se traduce una decisión visual
 
-1. La identidad aprobada (paleta, tipografía) se implementa
-   **reemplazando los valores de las variables** de `:root`, no
-   agregando estilos por componente.
+1. La identidad aprobada (paleta, tipografía) se implementa primero
+   **reemplazando los valores de las variables** de `:root`, que es el
+   primer mecanismo de adaptación de la base.
 2. Un componente visual se implementa reutilizando los existentes
    ([features.md](features.md)); si hace falta una diferencia, se crea
-   una variante.
+   una variante. Si el diseño requiere componentes, composiciones o
+   estilos que los tokens no cubren, se implementan en el proyecto.
 3. Las imágenes se resuelven una por una (completa vs. recortada,
    proporción, `object-position`); no se usa `cover` por defecto.
 4. Si una decisión visual es necesaria para implementar una función y

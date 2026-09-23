@@ -48,9 +48,11 @@ formularios → feedback → tablas → demo de theme.
 - **Theming**: `:root[data-theme="alt"]` redefine únicamente tokens de
   color. Componentes, spacing, radios, tipografía y sombras son
   compartidos. Ver [features.md](features.md#theming).
-- La identidad visual aprobada de un proyecto se implementa
-  reemplazando valores de los tokens, no agregando reglas por
-  componente (ver [diseno-a-codigo.md](diseno-a-codigo.md)).
+- Los tokens son el **primer mecanismo** para adaptar la base a la
+  identidad de un proyecto (reemplazando sus valores). No es el único:
+  un proyecto puede necesitar componentes, composiciones o estilos
+  propios, que viven en su repositorio (ver
+  [diseno-a-codigo.md](diseno-a-codigo.md)).
 - Reglas: variables antes que valores repetidos, clases reutilizables,
   sin `!important` injustificado, sin estilos inline innecesarios.
 

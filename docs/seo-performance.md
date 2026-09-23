@@ -38,9 +38,10 @@ cuando un proyecto lo resuelva de forma reutilizable.
 
 ## Analytics
 
-**No forma parte de la foundation.** Web-Base no incluye analytics ni
-tracking (el README de la raíz lo excluye explícitamente). Cada
-proyecto decide e implementa el suyo; si un enfoque resulta reutilizable
-(p. ej. un snippet opt-in o un estándar de eventos) puede promoverse
-según [evolucion.md](evolucion.md). La operación y el análisis de datos
+**Hoy no forma parte del foundation estándar.** Web-Base no incluye
+analytics ni tracking (el README de la raíz lo excluye explícitamente).
+Cada proyecto decide e implementa el suyo. Podría convertirse en un
+estándar reutilizable de Web-Base si primero se valida y demuestra
+útil en proyectos reales (p. ej. un snippet opt-in o un estándar de
+eventos), siguiendo [evolucion.md](evolucion.md). La operación y el análisis de datos
 pertenecen al flujo del proyecto / MACARIO.
