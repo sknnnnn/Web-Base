@@ -286,3 +286,10 @@ Antes de dar por terminada una tarea con impacto en HTML/CSS/JS,
 revisar `docs/qa-checklist.md` — contiene los criterios técnicos
 verificables (semántica, accesibilidad, responsive, consola, links,
 formularios, SEO) que esta base debe cumplir.
+
+## 21. DOCUMENTACIÓN
+
+El rol de Web-Base en el ecosistema (PRANA → MACARIO → Web-Base →
+Proyectos) y la documentación técnica de la foundation están en
+`docs/README.md`. No agregar a Web-Base documentación estratégica de
+PRANA, MACARIO ni de un proyecto concreto.
