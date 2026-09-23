@@ -153,7 +153,8 @@ Web-Base/
 │   ├── features.md
 │   ├── qa-checklist.md
 │   ├── seo-performance.md
-│   └── evolucion.md
+│   ├── evolucion.md
+│   └── sistema-visual.md
 └── .claude/
     └── commands/
         └── nuevo-proyecto.md

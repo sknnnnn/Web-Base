@@ -38,6 +38,7 @@ Detalle de qué pertenece y qué no: [proposito.md](proposito.md).
 | 06 | QA | [qa-checklist.md](qa-checklist.md) | Existente, vigente (sin cambios) |
 | 07 | SEO / Analytics / Performance | [seo-performance.md](seo-performance.md) | Nuevo |
 | 08 | Evolución de Web-Base | [evolucion.md](evolucion.md) | Nuevo |
+| 09 | Sistema visual base | [sistema-visual.md](sistema-visual.md) | Nuevo |
 
 Los archivos no llevan prefijo numérico para no renombrar
 `qa-checklist.md`, que ya está referenciado desde `CLAUDE.md` y desde
